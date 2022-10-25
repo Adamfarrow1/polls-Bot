@@ -19,7 +19,7 @@ public class Discord extends ListenerAdapter {
     private int[] votes;
 
     public static void main(String[] args) {
-        JDA bot = JDABuilder.createDefault("MTAzNDE4MzU1OTg1MTgxMDg0Nw.GJoxaB.2zON672L5Rnl1WOofejL-P3gV1thvUenuHnkp8")
+        JDA bot = JDABuilder.createDefault(System.getenv("TOKEN"))
                 .setActivity(Activity.playing("with rays sister"))
                 .enableIntents(GatewayIntent.MESSAGE_CONTENT)
                 .addEventListeners(new Discord())
